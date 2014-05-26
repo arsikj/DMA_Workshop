@@ -29,7 +29,7 @@ all: DMA_Workshop.axf
 DMA_Workshop.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="DMA_Workshop.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "DMA_Workshop_Debug.ld" -o "DMA_Workshop.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="DMA_Workshop.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "DMA_Workshop_Debug.ld" -o "DMA_Workshop.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

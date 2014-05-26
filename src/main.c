@@ -15,7 +15,7 @@
 #include <cr_section_macros.h>
 #include "payload_generator.h"
 #include "iap_driver.h"
-
+#include "led.h"
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
@@ -30,15 +30,17 @@ int main(void) {
 			;   // Error !!!
 
 	// TODO: insert code here
-	init_taster();
-
+	button_init();
+	led_init();
+	led_green_off();
+	led_yellow_on();
 	// Enter an infinite loop
 	while (1) {
 	}
 
 	return 0;
 }
-
-int check_file(void) {
-
+void button_click() {
+	led_green_invert();
+	led_yellow_invert();
 }
