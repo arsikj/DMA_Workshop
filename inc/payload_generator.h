@@ -146,43 +146,42 @@
 #define     FLASH_USER_HEADER_BLOCK_DATA    (0xABBA)
 
 static unsigned int sector_start_address[] = {
-    (unsigned int) FLASH_SECTOR_0_ADDRESS,
-    (unsigned int) FLASH_SECTOR_1_ADDRESS,
-    (unsigned int) FLASH_SECTOR_2_ADDRESS,
-    (unsigned int) FLASH_SECTOR_3_ADDRESS,
-    (unsigned int) FLASH_SECTOR_4_ADDRESS,
-    (unsigned int) FLASH_SECTOR_5_ADDRESS,
-    (unsigned int) FLASH_SECTOR_6_ADDRESS,
-    (unsigned int) FLASH_SECTOR_7_ADDRESS,
-    (unsigned int) FLASH_SECTOR_8_ADDRESS,
-    (unsigned int) FLASH_SECTOR_9_ADDRESS,
-    (unsigned int) FLASH_SECTOR_10_ADDRESS,
-    (unsigned int) FLASH_SECTOR_11_ADDRESS,
-    (unsigned int) FLASH_SECTOR_12_ADDRESS,
-    (unsigned int) FLASH_SECTOR_13_ADDRESS,
-    (unsigned int) FLASH_SECTOR_14_ADDRESS,
-    (unsigned int) FLASH_SECTOR_15_ADDRESS,
-    (unsigned int) FLASH_SECTOR_16_ADDRESS,
-    (unsigned int) FLASH_SECTOR_17_ADDRESS,
-    (unsigned int) FLASH_SECTOR_18_ADDRESS,
-    (unsigned int) FLASH_SECTOR_19_ADDRESS,
-    (unsigned int) FLASH_SECTOR_20_ADDRESS,
-    (unsigned int) FLASH_SECTOR_21_ADDRESS,
-    (unsigned int) FLASH_SECTOR_22_ADDRESS,
-    (unsigned int) FLASH_SECTOR_23_ADDRESS,
-    (unsigned int) FLASH_SECTOR_24_ADDRESS,
-    (unsigned int) FLASH_SECTOR_25_ADDRESS,
-    (unsigned int) FLASH_SECTOR_26_ADDRESS,
-    (unsigned int) FLASH_SECTOR_27_ADDRESS,
-    (unsigned int) FLASH_SECTOR_28_ADDRESS,
-    (unsigned int) FLASH_SECTOR_29_ADDRESS
-};
+		(unsigned int) FLASH_SECTOR_0_ADDRESS,
+		(unsigned int) FLASH_SECTOR_1_ADDRESS,
+		(unsigned int) FLASH_SECTOR_2_ADDRESS,
+		(unsigned int) FLASH_SECTOR_3_ADDRESS,
+		(unsigned int) FLASH_SECTOR_4_ADDRESS,
+		(unsigned int) FLASH_SECTOR_5_ADDRESS,
+		(unsigned int) FLASH_SECTOR_6_ADDRESS,
+		(unsigned int) FLASH_SECTOR_7_ADDRESS,
+		(unsigned int) FLASH_SECTOR_8_ADDRESS,
+		(unsigned int) FLASH_SECTOR_9_ADDRESS,
+		(unsigned int) FLASH_SECTOR_10_ADDRESS,
+		(unsigned int) FLASH_SECTOR_11_ADDRESS,
+		(unsigned int) FLASH_SECTOR_12_ADDRESS,
+		(unsigned int) FLASH_SECTOR_13_ADDRESS,
+		(unsigned int) FLASH_SECTOR_14_ADDRESS,
+		(unsigned int) FLASH_SECTOR_15_ADDRESS,
+		(unsigned int) FLASH_SECTOR_16_ADDRESS,
+		(unsigned int) FLASH_SECTOR_17_ADDRESS,
+		(unsigned int) FLASH_SECTOR_18_ADDRESS,
+		(unsigned int) FLASH_SECTOR_19_ADDRESS,
+		(unsigned int) FLASH_SECTOR_20_ADDRESS,
+		(unsigned int) FLASH_SECTOR_21_ADDRESS,
+		(unsigned int) FLASH_SECTOR_22_ADDRESS,
+		(unsigned int) FLASH_SECTOR_23_ADDRESS,
+		(unsigned int) FLASH_SECTOR_24_ADDRESS,
+		(unsigned int) FLASH_SECTOR_25_ADDRESS,
+		(unsigned int) FLASH_SECTOR_26_ADDRESS,
+		(unsigned int) FLASH_SECTOR_27_ADDRESS,
+		(unsigned int) FLASH_SECTOR_28_ADDRESS,
+		(unsigned int) FLASH_SECTOR_29_ADDRESS };
 
 /**
-* Fill flash with the payload
-*
-* @return IAP status codes
-*/
+ * Fill flash with the payload
+ *
+ * @return IAP status codes
+ */
 int generator_init(void);
 
 #endif /* PAYLOAD_GENERATOR_H_ */

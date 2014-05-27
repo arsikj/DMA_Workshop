@@ -16,6 +16,7 @@
 #include "payload_generator.h"
 #include "iap_driver.h"
 #include "led.h"
+#include "memory_transfer.h"
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
@@ -33,14 +34,26 @@ int main(void) {
 	button_init();
 	led_init();
 	led_green_off();
-	led_yellow_on();
+	led_yellow_off();
+	int *data;
+
 	// Enter an infinite loop
+	start_verf();
 	while (1) {
+
 	}
 
 	return 0;
 }
 void button_click() {
-	led_green_invert();
-	led_yellow_invert();
+	dma_config();
+	get_header();
+}
+void error_occured(void) {
+	while (1) {
+		led_red_invert();
+		int i = 0;
+		for (i = 0; i < 10000000; ++i)
+			;
+	}
 }

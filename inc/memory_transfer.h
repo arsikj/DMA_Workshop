@@ -8,13 +8,23 @@
 #ifndef MEMORY_TRANSFER_H_
 #define MEMORY_TRANSFER_H_
 #include "payload_generator.h"
+#include "stdint.h"
+typedef struct {
+	uint16_t preambula;
+	uint16_t chunk_number;
+	uint32_t chunk_size;
+} Header;
 
-#define NUMBER_OF_SECTORS FLASH_USER_SECTORS
-
-static unsigned int headers[NUMBER_OF_SECTORS];
-
-void init_transfer(void);
-
-void config_channel(int *src, int *dest, int chunk_size, int number_of_chunks);
-
+typedef struct {
+	uint8_t hash[16];
+	uint8_t part[PAYLOAD_SIZE_BYTES];
+} Chunk;
+void dma_config(void);
+void get_header(void);
+void transfer_chunk(uint32_t src, uint32_t dest, int transfer_size);
+void clear_interupts();
+void start_verf(void);
+void error_occured(void);
+void verifyf(void);
+int verify(void);
 #endif /* MEMORY_TRANSFER_H_ */
