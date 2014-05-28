@@ -4,7 +4,7 @@
  * (c) NXP Semiconductors 2013-2014
  * Generated linker script file for LPC1769
  * Created from LibIncTemplate.ld (LPCXpresso v7.2 (0 [Build 153] [2014-05-19] ))
- * By LPCXpresso v7.2.0 [Build 153] [2014-05-19]  on Tue May 27 17:36:56 CEST 2014
+ * By LPCXpresso v7.2.0 [Build 153] [2014-05-19]  on Wed May 28 16:18:28 CEST 2014
  */
 
 

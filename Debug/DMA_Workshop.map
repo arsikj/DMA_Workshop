@@ -1,6 +1,6 @@
 Archive member included because of file (symbol)
 
-C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
                               ./src/iap_driver.o (SystemCoreClockUpdate)
 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
                               ./src/md5.o (memcpy)
@@ -53,7 +53,7 @@ c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/
 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_cr_check_heap.o)
                               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_cr_sbrk.o) (__check_heap_overflow)
 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_64.o)
-                              C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o) (__aeabi_uldivmod)
+                              C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o) (__aeabi_uldivmod)
 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_idiv0.o)
                               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_64.o) (__aeabi_idiv0)
 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
@@ -64,10 +64,8 @@ Common symbol       size              file
 
 _extra              0x4               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(initio.o)
 _exitvector         0x84              c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
-chunks              0x4               ./src/memory_transfer.o
 _number_of_exit_functions
                     0x4               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
-header              0x8               ./src/memory_transfer.o
 __heaps             0x4               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__init_alloc.o)
 __end_of_heap       0x4               c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__init_alloc.o)
 __Ciob              0x140             c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdio.o)
@@ -104,7 +102,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x862 ./src/crp.o
  .debug_macro   0x00000000       0x34 ./src/crp.o
  .debug_line    0x00000000       0x78 ./src/crp.o
- .debug_str     0x00000000     0x24d0 ./src/crp.o
+ .debug_str     0x00000000     0x24e7 ./src/crp.o
  .comment       0x00000000       0x71 ./src/crp.o
  .ARM.attributes
                 0x00000000       0x33 ./src/crp.o
@@ -205,6 +203,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/memory_transfer.o
  .data          0x00000000        0x0 ./src/memory_transfer.o
  .bss           0x00000000        0x0 ./src/memory_transfer.o
+ .text.start_verf
+                0x00000000        0xc ./src/memory_transfer.o
  .debug_macro   0x00000000      0x862 ./src/memory_transfer.o
  .debug_macro   0x00000000      0x1ff ./src/memory_transfer.o
  .debug_macro   0x00000000       0x10 ./src/memory_transfer.o
@@ -241,26 +241,26 @@ Discarded input sections
  .debug_macro   0x00000000      0x2c7 ./src/payload_generator.o
  .debug_macro   0x00000000       0x82 ./src/payload_generator.o
  .debug_macro   0x00000000      0x1ff ./src/payload_generator.o
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .group         0x00000000        0x8 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .text          0x00000000        0x0 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .data          0x00000000        0x0 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .bss           0x00000000        0x0 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000       0x10 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000      0x122 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000      0x5b9 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000       0x1c C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000       0x3a C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000       0x2d C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000      0xbb1 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00000000      0x2c7 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0x8 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .text          0x00000000        0x0 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .data          0x00000000        0x0 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .bss           0x00000000        0x0 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x10 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0x122 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0x5b9 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x1c C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x3a C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x2d C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .text          0x00000000        0x0 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
  .data          0x00000000        0x0 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
  .bss           0x00000000        0x0 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
@@ -505,7 +505,7 @@ LOAD ./src/main.o
 LOAD ./src/md5.o
 LOAD ./src/memory_transfer.o
 LOAD ./src/payload_generator.o
-LOAD C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a
+LOAD C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a
 START GROUP
 LOAD c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a
 LOAD c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a
@@ -514,7 +514,7 @@ END GROUP
                 0x10008000                __top_RamLoc32 = 0x10008000
                 0x20084000                __top_RamAHB32 = 0x20084000
 
-.text           0x00000000     0x15c0
+.text           0x00000000     0x1664
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -523,16 +523,16 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x15c0 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x1664 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
-                0x000000d4        0x4 LONG 0xe8 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x15c0 LOADADDR (.data_RAM2)
+                0x000000d4        0x4 LONG 0xec SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x1664 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
                 0x000000e4                __bss_section_table = .
-                0x000000e4        0x4 LONG 0x100000e8 ADDR (.bss)
-                0x000000e8        0x4 LONG 0x14 SIZEOF (.bss)
+                0x000000e4        0x4 LONG 0x100000f0 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x818 SIZEOF (.bss)
                 0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
                 0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000f4                __bss_section_table_end = .
@@ -623,126 +623,134 @@ END GROUP
  .text.led_red_invert
                 0x000002d0       0x18 ./src/led.o
                 0x000002d0                led_red_invert
- .text.main     0x000002e8       0x24 ./src/main.o
+ .text.main     0x000002e8       0x20 ./src/main.o
                 0x000002e8                main
  .text.button_click
-                0x0000030c        0xc ./src/main.o
-                0x0000030c                button_click
+                0x00000308        0xc ./src/main.o
+                0x00000308                button_click
  .text.error_occured
-                0x00000318       0x1c ./src/main.o
-                0x00000318                error_occured
- .text.body     0x00000334      0x900 ./src/md5.o
+                0x00000314       0x1c ./src/main.o
+                0x00000314                error_occured
+ .text.body     0x00000330      0x900 ./src/md5.o
  .text.MD5_Init
-                0x00000c34       0x2c ./src/md5.o
-                0x00000c34                MD5_Init
+                0x00000c30       0x2c ./src/md5.o
+                0x00000c30                MD5_Init
  .text.MD5_Update
-                0x00000c60       0x84 ./src/md5.o
-                0x00000c60                MD5_Update
+                0x00000c5c       0x84 ./src/md5.o
+                0x00000c5c                MD5_Update
  .text.MD5_Final
-                0x00000ce4       0xd8 ./src/md5.o
-                0x00000ce4                MD5_Final
+                0x00000ce0       0xd8 ./src/md5.o
+                0x00000ce0                MD5_Final
  .text.dma_config
-                0x00000dbc       0x3c ./src/memory_transfer.o
-                0x00000dbc                dma_config
+                0x00000db8       0x3c ./src/memory_transfer.o
+                0x00000db8                dma_config
  .text.get_header
-                0x00000df8       0x30 ./src/memory_transfer.o
-                0x00000df8                get_header
+                0x00000df4       0x30 ./src/memory_transfer.o
+                0x00000df4                get_header
  .text.transfer_chunk
-                0x00000e28       0x30 ./src/memory_transfer.o
-                0x00000e28                transfer_chunk
+                0x00000e24       0x30 ./src/memory_transfer.o
+                0x00000e24                transfer_chunk
  .text.clear_interupts
-                0x00000e58       0x20 ./src/memory_transfer.o
-                0x00000e58                clear_interupts
+                0x00000e54       0x20 ./src/memory_transfer.o
+                0x00000e54                clear_interupts
+ .text.get_end  0x00000e74       0x40 ./src/memory_transfer.o
+                0x00000e74                get_end
+ .text.init_new_transfer
+                0x00000eb4       0x40 ./src/memory_transfer.o
+                0x00000eb4                init_new_transfer
+ .text.verify_header
+                0x00000ef4       0x20 ./src/memory_transfer.o
+                0x00000ef4                verify_header
+ .text.verify   0x00000f14       0x80 ./src/memory_transfer.o
+                0x00000f14                verify
+ .text.check_end
+                0x00000f94       0x14 ./src/memory_transfer.o
+                0x00000f94                check_end
  .text.DMA_IRQHandler
-                0x00000e78       0x64 ./src/memory_transfer.o
-                0x00000e78                DMA_IRQHandler
- .text.verify   0x00000edc       0x84 ./src/memory_transfer.o
-                0x00000edc                verify
- .text.start_verf
-                0x00000f60       0x1c ./src/memory_transfer.o
-                0x00000f60                start_verf
+                0x00000fa8       0x40 ./src/memory_transfer.o
+                0x00000fa8                DMA_IRQHandler
  .text.seed_payload
-                0x00000f7c       0x38 ./src/payload_generator.o
-                0x00000f7c                seed_payload
+                0x00000fe8       0x38 ./src/payload_generator.o
+                0x00000fe8                seed_payload
  .text.calculate_hash
-                0x00000fb4       0x58 ./src/payload_generator.o
-                0x00000fb4                calculate_hash
+                0x00001020       0x80 ./src/payload_generator.o
+                0x00001020                calculate_hash
  .text.write_header
-                0x0000100c       0x74 ./src/payload_generator.o
-                0x0000100c                write_header
+                0x000010a0       0x74 ./src/payload_generator.o
+                0x000010a0                write_header
  .text.write_payload
-                0x00001080       0xa8 ./src/payload_generator.o
-                0x00001080                write_payload
+                0x00001114       0xb8 ./src/payload_generator.o
+                0x00001114                write_payload
  .text.write_end
-                0x00001128       0x54 ./src/payload_generator.o
-                0x00001128                write_end
+                0x000011cc       0x54 ./src/payload_generator.o
+                0x000011cc                write_end
  .text.generator_init
-                0x0000117c       0x50 ./src/payload_generator.o
-                0x0000117c                generator_init
+                0x00001220       0x50 ./src/payload_generator.o
+                0x00001220                generator_init
  .text.SystemCoreClockUpdate
-                0x000011cc       0xb0 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                0x000011cc                SystemCoreClockUpdate
+                0x00001270       0xb0 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00001270                SystemCoreClockUpdate
  .text.SystemInit
-                0x0000127c       0xe0 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                0x0000127c                SystemInit
- .text.memcpy   0x0000135c        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
-                0x0000135c                memcpy
- .text.memset   0x00001360        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memset.o)
-                0x00001360                memset
+                0x00001320       0xe0 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00001320                SystemInit
+ .text.memcpy   0x00001400        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
+                0x00001400                memcpy
+ .text.memset   0x00001404        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memset.o)
+                0x00001404                memset
  .text.__weak_main
-                0x00001364        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
-                0x00001364                __weak_main
-                0x00001364                __main
- .text.rand     0x00001368       0x3c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
-                0x00001368                rand
- .text.srand    0x000013a4       0x3c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
-                0x000013a4                srand
+                0x00001408        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                0x00001408                __weak_main
+                0x00001408                __main
+ .text.rand     0x0000140c       0x3c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
+                0x0000140c                rand
+ .text.srand    0x00001448       0x3c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
+                0x00001448                srand
  .text.__aeabi_division_uldivmod
-                0x000013e0      0x188 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_64.o)
-                0x000013e0                __aeabi_uldivmod
-                0x000013e4                __bhs_ldivmod1
+                0x00001484      0x188 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_64.o)
+                0x00001484                __aeabi_uldivmod
+                0x00001488                __bhs_ldivmod1
  .text.__aeabi_division_idiv0
-                0x00001568        0x2 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_idiv0.o)
-                0x00001568                __aeabi_idiv0
+                0x0000160c        0x2 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x0000160c                __aeabi_idiv0
  .text.__aeabi_memcpy
-                0x0000156a       0x2a c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
-                0x0000156a                __aeabi_memcpy4
-                0x0000156a                __aeabi_memcpy8
-                0x0000156a                __aeabi_memcpy
+                0x0000160e       0x2a c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
+                0x0000160e                __aeabi_memcpy4
+                0x0000160e                __aeabi_memcpy8
+                0x0000160e                __aeabi_memcpy
  .text.__aeabi_memset_lowlevel
-                0x00001594       0x2c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
-                0x00001594                __aeabi_lowlevel_memset
+                0x00001638       0x2c c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
+                0x00001638                __aeabi_lowlevel_memset
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x000015c0                . = ALIGN (0x4)
+                0x00001664                . = ALIGN (0x4)
 
-.glue_7         0x000015c0        0x0
+.glue_7         0x00001664        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x000015c0        0x0
+.glue_7t        0x00001664        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x000015c0        0x0
+.vfp11_veneer   0x00001664        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000015c0        0x0
+.v4_bx          0x00001664        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000015c0        0x0
+.iplt           0x00001664        0x0
  .iplt          0x00000000        0x0 ./src/button.o
 
-.rel.dyn        0x000015c0        0x0
+.rel.dyn        0x00001664        0x0
  .rel.iplt      0x00000000        0x0 ./src/button.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000015c0                __exidx_start = .
+                0x00001664                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000015c0                __exidx_end = .
-                0x000015c0                _etext = .
+                0x00001664                __exidx_end = .
+                0x00001664                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x000015c0
+.data_RAM2      0x2007c000        0x0 load address 0x00001664
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamAHB32)
@@ -756,25 +764,28 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000       0xe8 load address 0x000015c0
+.data           0x10000000       0xec load address 0x00001664
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
  *(.ramfunc*)
  *(.data*)
+ .data.wrong_hashes_chunk_positions
+                0x10000000        0x4 ./src/payload_generator.o
+                0x10000000                wrong_hashes_chunk_positions
  .data.SystemCoreClock
-                0x10000000        0x4 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                0x10000000                SystemCoreClock
+                0x10000004        0x4 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x10000004                SystemCoreClock
  .data._random_number_seed
-                0x10000004       0xdc c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
+                0x10000008       0xdc c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
  .data._random_j
-                0x100000e0        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
- .data._random_k
                 0x100000e4        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
-                0x100000e8                . = ALIGN (0x4)
-                0x100000e8                _edata = .
+ .data._random_k
+                0x100000e8        0x4 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(stdlib.o)
+                0x100000ec                . = ALIGN (0x4)
+                0x100000ec                _edata = .
 
-.igot.plt       0x100000e8        0x0 load address 0x000016a8
+.igot.plt       0x100000ec        0x0 load address 0x00001750
  .igot.plt      0x00000000        0x0 ./src/button.o
 
 .bss_RAM2       0x2007c000        0x0
@@ -782,59 +793,59 @@ END GROUP
  *(.bss.$RamAHB32*)
                 0x2007c000                . = ALIGN (0x4)
 
-.bss            0x100000e8       0x14
-                0x100000e8                _bss = .
+.bss            0x100000f0      0x818
+                0x100000f0                _bss = .
  *(.bss*)
- .bss.current   0x100000e8        0x4 ./src/memory_transfer.o
-                0x100000e8                current
- .bss.current_vrf
-                0x100000ec        0x4 ./src/memory_transfer.o
-                0x100000ec                current_vrf
+ .bss.end       0x100000f0        0x8 ./src/memory_transfer.o
+ .bss.current   0x100000f8        0x4 ./src/memory_transfer.o
+ .bss.header    0x100000fc        0x8 ./src/memory_transfer.o
+ .bss.chunk     0x10000104      0x800 ./src/memory_transfer.o
+ .bss.wrong_hashes_current_position
+                0x10000904        0x1 ./src/payload_generator.o
+                0x10000904                wrong_hashes_current_position
  *(COMMON)
- COMMON         0x100000f0        0xc ./src/memory_transfer.o
-                0x100000f0                chunks
-                0x100000f4                header
-                0x100000fc                . = ALIGN (0x4)
-                0x100000fc                _ebss = .
-                0x100000fc                PROVIDE (end, .)
+                0x10000908                . = ALIGN (0x4)
+ *fill*         0x10000905        0x3 
+                0x10000908                _ebss = .
+                0x10000908                PROVIDE (end, .)
 
 .noinit_RAM2    0x2007c000        0x0
  *(.noinit.$RAM2*)
  *(.noinit.$RamAHB32*)
                 0x2007c000                . = ALIGN (0x4)
 
-.noinit         0x100000fc        0x0
-                0x100000fc                _noinit = .
+.noinit         0x10000908        0x0
+                0x10000908                _noinit = .
  *(.noinit*)
-                0x100000fc                . = ALIGN (0x4)
-                0x100000fc                _end_noinit = .
-                0x100000fc                PROVIDE (_pvHeapStart, .)
+                0x10000908                . = ALIGN (0x4)
+                0x10000908                _end_noinit = .
+                0x10000908                PROVIDE (_pvHeapStart, .)
                 0x10008000                PROVIDE (_vStackTop, (__top_RamLoc32 - 0x0))
 OUTPUT(DMA_Workshop.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x2e0a
+.debug_info     0x00000000     0x2ed8
  .debug_info    0x00000000      0x6dd ./src/button.o
  .debug_info    0x000006dd      0x27f ./src/cr_startup_lpc175x_6x.o
  .debug_info    0x0000095c      0x2d2 ./src/iap_driver.o
  .debug_info    0x00000c2e      0x5c3 ./src/led.o
- .debug_info    0x000011f1      0x236 ./src/main.o
- .debug_info    0x00001427      0x414 ./src/md5.o
- .debug_info    0x0000183b      0xacb ./src/memory_transfer.o
- .debug_info    0x00002306      0x7ec ./src/payload_generator.o
- .debug_info    0x00002af2      0x318 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_info    0x000011f1      0x215 ./src/main.o
+ .debug_info    0x00001406      0x414 ./src/md5.o
+ .debug_info    0x0000181a      0xb88 ./src/memory_transfer.o
+ .debug_info    0x000023a2      0x81e ./src/payload_generator.o
+ .debug_info    0x00002bc0      0x318 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_abbrev   0x00000000      0xd36
+.debug_abbrev   0x00000000      0xd42
  .debug_abbrev  0x00000000      0x192 ./src/button.o
  .debug_abbrev  0x00000192      0x120 ./src/cr_startup_lpc175x_6x.o
  .debug_abbrev  0x000002b2      0x14b ./src/iap_driver.o
  .debug_abbrev  0x000003fd       0xeb ./src/led.o
- .debug_abbrev  0x000004e8      0x14c ./src/main.o
- .debug_abbrev  0x00000634      0x165 ./src/md5.o
- .debug_abbrev  0x00000799      0x2b9 ./src/memory_transfer.o
- .debug_abbrev  0x00000a52      0x1fe ./src/payload_generator.o
- .debug_abbrev  0x00000c50       0xe6 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_abbrev  0x000004e8      0x143 ./src/main.o
+ .debug_abbrev  0x0000062b      0x165 ./src/md5.o
+ .debug_abbrev  0x00000790      0x2bd ./src/memory_transfer.o
+ .debug_abbrev  0x00000a4d      0x20f ./src/payload_generator.o
+ .debug_abbrev  0x00000c5c       0xe6 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_aranges  0x00000000      0x270
+.debug_aranges  0x00000000      0x290
  .debug_aranges
                 0x00000000       0x28 ./src/button.o
  .debug_aranges
@@ -848,24 +859,24 @@ OUTPUT(DMA_Workshop.axf elf32-littlearm)
  .debug_aranges
                 0x00000178       0x38 ./src/md5.o
  .debug_aranges
-                0x000001b0       0x50 ./src/memory_transfer.o
+                0x000001b0       0x70 ./src/memory_transfer.o
  .debug_aranges
-                0x00000200       0x48 ./src/payload_generator.o
+                0x00000220       0x48 ./src/payload_generator.o
  .debug_aranges
-                0x00000248       0x28 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00000268       0x28 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_ranges   0x00000000      0x1e0
+.debug_ranges   0x00000000      0x200
  .debug_ranges  0x00000000       0x18 ./src/button.o
  .debug_ranges  0x00000018       0x70 ./src/cr_startup_lpc175x_6x.o
  .debug_ranges  0x00000088       0x28 ./src/iap_driver.o
  .debug_ranges  0x000000b0       0x58 ./src/led.o
  .debug_ranges  0x00000108       0x20 ./src/main.o
  .debug_ranges  0x00000128       0x28 ./src/md5.o
- .debug_ranges  0x00000150       0x40 ./src/memory_transfer.o
- .debug_ranges  0x00000190       0x38 ./src/payload_generator.o
- .debug_ranges  0x000001c8       0x18 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_ranges  0x00000150       0x60 ./src/memory_transfer.o
+ .debug_ranges  0x000001b0       0x38 ./src/payload_generator.o
+ .debug_ranges  0x000001e8       0x18 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_macro    0x00000000     0x374a
+.debug_macro    0x00000000     0x3756
  .debug_macro   0x00000000       0x82 ./src/button.o
  .debug_macro   0x00000082      0x862 ./src/button.o
  .debug_macro   0x000008e4       0x1c ./src/button.o
@@ -885,41 +896,41 @@ OUTPUT(DMA_Workshop.axf elf32-littlearm)
  .debug_macro   0x00002b43       0x82 ./src/main.o
  .debug_macro   0x00002bc5       0x77 ./src/md5.o
  .debug_macro   0x00002c3c       0x9e ./src/memory_transfer.o
- .debug_macro   0x00002cda       0xbf ./src/payload_generator.o
- .debug_macro   0x00002d99       0x28 ./src/payload_generator.o
- .debug_macro   0x00002dc1      0x12d C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00002eee      0x85c C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00002cda       0xcb ./src/payload_generator.o
+ .debug_macro   0x00002da5       0x28 ./src/payload_generator.o
+ .debug_macro   0x00002dcd      0x12d C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00002efa      0x85c C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_line     0x00000000     0x14b9
- .debug_line    0x00000000      0x1e6 ./src/button.o
- .debug_line    0x000001e6       0x9d ./src/cr_startup_lpc175x_6x.o
- .debug_line    0x00000283      0x229 ./src/iap_driver.o
- .debug_line    0x000004ac      0x25c ./src/led.o
- .debug_line    0x00000708      0x286 ./src/main.o
- .debug_line    0x0000098e      0x324 ./src/md5.o
- .debug_line    0x00000cb2      0x2a7 ./src/memory_transfer.o
- .debug_line    0x00000f59      0x357 ./src/payload_generator.o
- .debug_line    0x000012b0      0x209 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+.debug_line     0x00000000     0x1687
+ .debug_line    0x00000000      0x214 ./src/button.o
+ .debug_line    0x00000214       0x9d ./src/cr_startup_lpc175x_6x.o
+ .debug_line    0x000002b1      0x257 ./src/iap_driver.o
+ .debug_line    0x00000508      0x28a ./src/led.o
+ .debug_line    0x00000792      0x2b3 ./src/main.o
+ .debug_line    0x00000a45      0x33b ./src/md5.o
+ .debug_line    0x00000d80      0x356 ./src/memory_transfer.o
+ .debug_line    0x000010d6      0x391 ./src/payload_generator.o
+ .debug_line    0x00001467      0x220 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_str      0x00000000     0xb6f2
- .debug_str     0x00000000     0x984e ./src/button.o
-                               0x98d4 (size before relaxing)
- .debug_str     0x0000984e      0x295 ./src/cr_startup_lpc175x_6x.o
-                               0x25de (size before relaxing)
- .debug_str     0x00009ae3      0xaf9 ./src/iap_driver.o
-                               0x9f50 (size before relaxing)
- .debug_str     0x0000a5dc      0x1b4 ./src/led.o
-                               0x9751 (size before relaxing)
- .debug_str     0x0000a790      0x584 ./src/main.o
-                               0xa381 (size before relaxing)
- .debug_str     0x0000ad14      0x2b6 ./src/md5.o
-                               0x2c16 (size before relaxing)
- .debug_str     0x0000afca      0x308 ./src/memory_transfer.o
-                               0xa3ee (size before relaxing)
- .debug_str     0x0000b2d2      0x127 ./src/payload_generator.o
-                               0xa548 (size before relaxing)
- .debug_str     0x0000b3f9      0x2f9 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                               0x9893 (size before relaxing)
+.debug_str      0x00000000     0xb7c7
+ .debug_str     0x00000000     0x9865 ./src/button.o
+                               0x98eb (size before relaxing)
+ .debug_str     0x00009865      0x295 ./src/cr_startup_lpc175x_6x.o
+                               0x25f5 (size before relaxing)
+ .debug_str     0x00009afa      0xaf9 ./src/iap_driver.o
+                               0x9f67 (size before relaxing)
+ .debug_str     0x0000a5f3      0x1b4 ./src/led.o
+                               0x9768 (size before relaxing)
+ .debug_str     0x0000a7a7      0x574 ./src/main.o
+                               0xa388 (size before relaxing)
+ .debug_str     0x0000ad1b      0x2bb ./src/md5.o
+                               0x2c2d (size before relaxing)
+ .debug_str     0x0000afd6      0x350 ./src/memory_transfer.o
+                               0xa448 (size before relaxing)
+ .debug_str     0x0000b326      0x191 ./src/payload_generator.o
+                               0xa5c2 (size before relaxing)
+ .debug_str     0x0000b4b7      0x310 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                               0x98aa (size before relaxing)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 ./src/button.o
@@ -931,7 +942,7 @@ OUTPUT(DMA_Workshop.axf elf32-littlearm)
  .comment       0x00000000       0x71 ./src/md5.o
  .comment       0x00000000       0x71 ./src/memory_transfer.o
  .comment       0x00000000       0x71 ./src/payload_generator.o
- .comment       0x00000000       0x71 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .comment       0x00000000       0x71 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .comment       0x00000000       0x71 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
  .comment       0x00000000       0x71 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memset.o)
  .comment       0x00000000       0x71 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
@@ -956,7 +967,7 @@ OUTPUT(DMA_Workshop.axf elf32-littlearm)
  .ARM.attributes
                 0x00000165       0x33 ./src/payload_generator.o
  .ARM.attributes
-                0x00000198       0x33 C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00000198       0x33 C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .ARM.attributes
                 0x000001cb       0x33 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
  .ARM.attributes
@@ -972,22 +983,22 @@ OUTPUT(DMA_Workshop.axf elf32-littlearm)
  .ARM.attributes
                 0x000002d9       0x21 c:/nxp/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libcr_eabihelpers.a(memcpy.o)
 
-.debug_frame    0x00000000      0x4ec
+.debug_frame    0x00000000      0x53c
  .debug_frame   0x00000000       0x38 ./src/button.o
  .debug_frame   0x00000038       0xf0 ./src/cr_startup_lpc175x_6x.o
  .debug_frame   0x00000128       0x70 ./src/iap_driver.o
  .debug_frame   0x00000198       0xb0 ./src/led.o
  .debug_frame   0x00000248       0x5c ./src/main.o
  .debug_frame   0x000002a4       0x84 ./src/md5.o
- .debug_frame   0x00000328       0xac ./src/memory_transfer.o
- .debug_frame   0x000003d4       0xdc ./src/payload_generator.o
- .debug_frame   0x000004b0       0x3c C:\Users\Dejan\Desktop\FINKI\lpc\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_frame   0x00000328       0xfc ./src/memory_transfer.o
+ .debug_frame   0x00000424       0xdc ./src/payload_generator.o
+ .debug_frame   0x00000500       0x3c C:\Users\Bojan\Documents\LPCXpresso_7.2.0_153\workspace\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
 
-.debug_loc      0x00000000     0x1390
+.debug_loc      0x00000000     0x13be
  .debug_loc     0x00000000      0x15f ./src/cr_startup_lpc175x_6x.o
  .debug_loc     0x0000015f      0x12f ./src/iap_driver.o
  .debug_loc     0x0000028e       0x55 ./src/led.o
  .debug_loc     0x000002e3       0x32 ./src/main.o
  .debug_loc     0x00000315      0xc60 ./src/md5.o
- .debug_loc     0x00000f75      0x165 ./src/memory_transfer.o
- .debug_loc     0x000010da      0x2b6 ./src/payload_generator.o
+ .debug_loc     0x00000f75      0x163 ./src/memory_transfer.o
+ .debug_loc     0x000010d8      0x2e6 ./src/payload_generator.o

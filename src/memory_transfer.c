@@ -9,10 +9,12 @@
 #include "LPC17xx.h"
 #include "md5.h"
 #include "led.h"
-Header header;
-Chunk chunks[];
-int current = 0;
-int current_vrf = 0;
+
+static Header header;
+static Chunk chunk;
+static uint64_t end;
+
+static int current = 0;
 void dma_config(void) {
 	//power dma
 	LPC_SC->PCONP |= (1 << 29);
@@ -37,9 +39,8 @@ void get_header(void) {
 }
 
 void transfer_chunk(uint32_t src, uint32_t dest, int transfer_size) {
-	unsigned int control = (((16 + transfer_size) / 4) | (0x0FFF)) | (1 << 18)
+	unsigned int control = (((16 + transfer_size) / 4) | (0x0FFF)) | (2 << 18)
 			| (2 << 21) | (1 << 26) | (1 << 27) | (1 << 31);
-
 	LPC_GPDMACH0->DMACCSrcAddr = src; //koja adresa treba tuka
 	LPC_GPDMACH0->DMACCDestAddr = dest;
 	LPC_GPDMACH0->DMACCControl |= control;
@@ -50,21 +51,37 @@ void transfer_chunk(uint32_t src, uint32_t dest, int transfer_size) {
 void DMA_IRQHandler(void) {
 	clear_interupts();
 
-	if (chunks == 0) { //header transfered
-		//Chunk c[header.chunk_size];
-		//chunks = c;
-	}
-	if (current <= header.chunk_number) {
-		uint32_t src = (sector_start_address[FLASH_USER_PAYLOAD_START_SECTOR])
-				+ (current * (16 + header.chunk_size));
-		transfer_chunk(src, &chunks[current], header.chunk_size);
-		current++;
+	if (current == 0) {
+		verify_header();
 	} else {
-//proveri kraj
-
+		if (current == (header.chunk_number + 1)) {
+			check_end();
+		} else if (!verify()) {
+			NVIC_DisableIRQ(DMA_IRQn);
+		}
 	}
 
 }
+
+void verify_header() {
+	if (header.preambula == 0xABBA) {
+		init_new_transfer();
+	} else {
+		led_yellow_on();
+	}
+}
+void init_new_transfer() {
+
+	if (current <= header.chunk_number) {
+		uint32_t src = (uint32_t) ((0x00005000)
+				+ (current * (16 + header.chunk_size)));
+		transfer_chunk(src, (uint32_t) &chunk, header.chunk_size);
+		current++;
+	} else {
+		get_end();
+	}
+}
+
 void clear_interupts(void) {
 	LPC_GPDMA->DMACIntTCClear = 1;
 	int error_status = LPC_GPDMA->DMACIntErrStat;
@@ -76,37 +93,52 @@ void clear_interupts(void) {
 }
 
 void start_verf(void) {
-	while (1) {
-		int res = verify();
-		if (res == 2) {
-			led_yellow_on();
-			return;
-		}
-		if (!res) {
-			led_green_on();
-			return;
-		}
-	}
+	while (verify())
+		;
 }
 
 int verify(void) {
-	if (current_vrf >= current) {
-		return 1;
+	Chunk local_chunk;
+	int j = 0;
+	for (j = 0; j < 16; ++j) {
+		local_chunk.hash[j] = chunk.hash[j];
 	}
+	for (j = 0; j < PAYLOAD_SIZE_BYTES; ++j) {
+		local_chunk.part[j] = chunk.part[j];
+	}
+
+	init_new_transfer();
+
 	MD5_CTX ctx;
 	MD5_Init(&ctx);
-	MD5_Update(&ctx, chunks[current_vrf].part, header.chunk_size);
+	MD5_Update(&ctx, local_chunk.part, header.chunk_size);
 	unsigned char result[16];
 	MD5_Final(result, &ctx);
+
 	int i = 0;
 	for (i = 0; i < 6; ++i) {
-		if (*(result + i) != chunks[current_vrf].hash[i]) {
-			return 2;
+		if (*(result + i) != local_chunk.hash[i]) {
+			led_yellow_on();
+			return 0;
 		}
 	}
-	current_vrf++;
-	if (current_vrf == header.chunk_number) {
-		return 0;
-	}
 	return 1;
+}
+void get_end() {
+	uint32_t src = (uint32_t) ((0x00005000)
+			+ (header.chunk_number * (16 + header.chunk_size)));
+	unsigned int control = (2 | (0x0FFF)) | (2 << 18) | (2 << 21) | (1 << 26)
+			| (1 << 27) | (1 << 31);
+	LPC_GPDMACH0->DMACCSrcAddr = src; //koja adresa treba tuka
+	LPC_GPDMACH0->DMACCDestAddr = &end;
+	LPC_GPDMACH0->DMACCControl |= control;
+	LPC_GPDMACH0->DMACCConfig |= 0x0c001;
+}
+void check_end() {
+	//proveri end
+	int i = 0;
+	for (i = 0; i < 8; ++i) {
+
+	}
+	led_green_on();
 }

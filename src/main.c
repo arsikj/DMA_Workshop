@@ -35,10 +35,8 @@ int main(void) {
 	led_init();
 	led_green_off();
 	led_yellow_off();
-	int *data;
 
 	// Enter an infinite loop
-	start_verf();
 	while (1) {
 
 	}
@@ -46,8 +44,11 @@ int main(void) {
 	return 0;
 }
 void button_click() {
+	led_green_off();
+	led_yellow_off();
 	dma_config();
 	get_header();
+//	start_verf();
 }
 void error_occured(void) {
 	while (1) {

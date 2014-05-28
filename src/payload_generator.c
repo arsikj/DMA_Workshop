@@ -15,11 +15,11 @@
 #include "md5.h"
 #include "payload_generator.h"
 
-//#define WRONG_HASH  1
+#define WRONG_HASH  1
 
 #ifdef WRONG_HASH
-#define NUMBER_OF_WRONG_HASHES (4)
-uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = {3, 8, 11, 15};
+#define NUMBER_OF_WRONG_HASHES (1)
+uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = { 213 };
 uint8_t wrong_hashes_current_position = 0;
 #endif
 
@@ -55,7 +55,7 @@ void calculate_hash(uint8_t* hash_destination, uint32_t data_size) {
 		/* Calculate MD5 hash with iterative calculation due to */
 		/* 64B buffer space limitation of the MD5 API */
 		for (size = 0; data_size >= MD5_BUFFER_SIZE_BYTES; data_size -=
-				MD5_BUFFER_SIZE_BYTES) {
+		MD5_BUFFER_SIZE_BYTES) {
 
 			index = MD5_HASH_SIZE_BYTES + size;
 			size += MD5_BUFFER_SIZE_BYTES;
@@ -75,10 +75,11 @@ void calculate_hash(uint8_t* hash_destination, uint32_t data_size) {
 
 #ifdef WRONG_HASH
 	for (size = 0; size < NUMBER_OF_WRONG_HASHES; ++size)
-	if (wrong_hashes_current_position == wrong_hashes_chunk_positions[size]) {
-		hash_destination[0] <<= 2;
-		break;
-	}
+		if (wrong_hashes_current_position
+				== wrong_hashes_chunk_positions[size]) {
+			hash_destination[0] <<= 2;
+			break;
+		}
 #endif
 }
 
@@ -110,7 +111,7 @@ int write_header(void) {
 
 	/* Prepare the current sector for writing */
 	iap_status = (e_iap_status) iap_prepare_sector(FLASH_USER_HEADER_SECTOR,
-			FLASH_USER_HEADER_SECTOR);
+	FLASH_USER_HEADER_SECTOR);
 	if (iap_status != CMD_SUCCESS)
 		return iap_status;
 
@@ -154,7 +155,7 @@ int write_payload(void) {
 
 			/* Initialize it with random data */
 			seed_payload(&block[index + MD5_HASH_SIZE_BYTES],
-					PAYLOAD_SIZE_BYTES, address + payload_piece);
+			PAYLOAD_SIZE_BYTES, address + payload_piece);
 
 			/* Calculate the hash of the random data */
 			calculate_hash(&block[index], PAYLOAD_SIZE_BYTES);
@@ -203,7 +204,7 @@ int write_end(void) {
 
 	/* Prepare the current sector for writing */
 	iap_status = (e_iap_status) iap_prepare_sector(FLASH_USER_END_SECTOR,
-			FLASH_USER_END_SECTOR);
+	FLASH_USER_END_SECTOR);
 	if (iap_status != CMD_SUCCESS)
 		return iap_status;
 
@@ -229,13 +230,13 @@ int generator_init(void) {
 
 	/* Prepare the user sectors for erase */
 	iap_status = (e_iap_status) iap_prepare_sector(FLASH_USER_HEADER_SECTOR,
-			FLASH_USER_END_SECTOR);
+	FLASH_USER_END_SECTOR);
 	if (iap_status != CMD_SUCCESS)
 		return iap_status;
 
 	/* Erase all user sectors */
 	iap_status = (e_iap_status) iap_erase_sector(FLASH_USER_HEADER_SECTOR,
-			FLASH_USER_END_SECTOR);
+	FLASH_USER_END_SECTOR);
 	if (iap_status != CMD_SUCCESS)
 		return iap_status;
 
