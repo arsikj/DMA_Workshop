@@ -2,7 +2,7 @@
  * button.h
  *
  *  Created on: 26.5.2014
- *      Author: Bojan
+ *      Author: Team 6: Dejan, Mila, Bojan
  */
 
 #ifndef BUTTON_H_
@@ -10,5 +10,4 @@
 
 void button_init(void);
 
-void button_click(void);
 #endif /* BUTTON_H_ */

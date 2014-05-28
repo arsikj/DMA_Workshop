@@ -15,16 +15,19 @@
 #include <cr_section_macros.h>
 #include "payload_generator.h"
 #include "iap_driver.h"
-#include "led.h"
-#include "memory_transfer.h"
+
 // TODO: insert other include files here
+#include "led.h"
 
 // TODO: insert other definitions and declarations here
 
 int main(void) {
 	e_iap_status iap_status;
-
+	led_init();
+	//notify user for data loading
+	led_red_on();
 	/* Fill the flash with payload and hash data */
+
 	iap_status = (e_iap_status) generator_init();
 	if (iap_status != CMD_SUCCESS)
 		while (1)
@@ -32,10 +35,10 @@ int main(void) {
 
 	// TODO: insert code here
 	button_init();
-	led_init();
+	//power off leds in case they work
 	led_green_off();
 	led_yellow_off();
-
+	led_red_off();
 	// Enter an infinite loop
 	while (1) {
 
@@ -43,13 +46,10 @@ int main(void) {
 
 	return 0;
 }
-void button_click() {
-	led_green_off();
-	led_yellow_off();
-	dma_config();
-	get_header();
-//	start_verf();
-}
+
+/*
+ * error in channel (red led blink)
+ */
 void error_occured(void) {
 	while (1) {
 		led_red_invert();

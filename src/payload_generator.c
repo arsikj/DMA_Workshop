@@ -19,7 +19,7 @@
 
 #ifdef WRONG_HASH
 #define NUMBER_OF_WRONG_HASHES (1)
-uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = { 213 };
+uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = { 100 };
 uint8_t wrong_hashes_current_position = 0;
 #endif
 
