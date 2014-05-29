@@ -133,7 +133,7 @@
 #define     PAYLOAD_SMALL_SIZE          (496)
 #define     PAYLOAD_MEDIUM_SIZE         (1008)
 #define     PAYLOAD_LARGE_SIZE          (2032)
-#define     PAYLOAD_SIZE_BYTES          PAYLOAD_LARGE_SIZE
+#define     PAYLOAD_SIZE_BYTES          PAYLOAD_TINY_SIZE
 
 #define     MD5_HASH_SIZE_BYTES         (16)
 #define     MD5_BUFFER_SIZE_BYTES       (64)

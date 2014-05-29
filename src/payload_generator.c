@@ -15,11 +15,11 @@
 #include "md5.h"
 #include "payload_generator.h"
 
-#define WRONG_HASH  1
+//#define WRONG_HASH  1
 
 #ifdef WRONG_HASH
 #define NUMBER_OF_WRONG_HASHES (1)
-uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = { 100 };
+uint8_t wrong_hashes_chunk_positions[NUMBER_OF_WRONG_HASHES] = {100};
 uint8_t wrong_hashes_current_position = 0;
 #endif
 
@@ -75,11 +75,11 @@ void calculate_hash(uint8_t* hash_destination, uint32_t data_size) {
 
 #ifdef WRONG_HASH
 	for (size = 0; size < NUMBER_OF_WRONG_HASHES; ++size)
-		if (wrong_hashes_current_position
-				== wrong_hashes_chunk_positions[size]) {
-			hash_destination[0] <<= 2;
-			break;
-		}
+	if (wrong_hashes_current_position
+			== wrong_hashes_chunk_positions[size]) {
+		hash_destination[0] <<= 2;
+		break;
+	}
 #endif
 }
 

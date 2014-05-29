@@ -18,7 +18,9 @@ static Header header;
 /*
  * chunk(part of archive) transferred from the flash
  */
-static Chunk chunk;
+volatile static Chunk chunk1;
+
+volatile static Chunk chunk2;
 
 /*
  * end of archive transferred from the flash
@@ -127,15 +129,26 @@ void verify_header() {
 void init_new_transfer() {
 
 	//transfer not finished
-	if (current < header.chunk_number) {
+	if (current == header.chunk_number - 1) {
+		get_end();
+	} else {
 		uint32_t src =
 				(uint32_t) ((sector_start_address[FLASH_USER_PAYLOAD_START_SECTOR])
 						+ (current * (16 + header.chunk_size)));
-		transfer_chunk(src, (uint32_t) &chunk, header.chunk_size);
-		current++;
-	} else {
-		get_end();
+		uint32_t chunk_address = (uint32_t) (current % 2) ? &chunk1 : &chunk2;
+		transfer_chunk(src, chunk_address, header.chunk_size);
 	}
+//	if (current < header.chunk_number - 1) {
+//		uint32_t src =
+//				(uint32_t) ((sector_start_address[FLASH_USER_PAYLOAD_START_SECTOR])
+//						+ (current * (16 + header.chunk_size)));
+//		uint32_t chunk_address = (uint32_t) (current % 2) ? &chunk1 : &chunk2;
+//		transfer_chunk(src, chunk_address, header.chunk_size);
+//
+//	} else {
+//		get_end();
+//	}
+	current++;
 }
 
 /*
@@ -155,29 +168,43 @@ void clear_interupts(void) {
  * @return 0 if error, 1 if success
  */
 int verify(void) {
-	//local chunk for verifying
-	Chunk local_chunk;
-	int j = 0;
-	//copying data
-	for (j = 0; j < 16; ++j) {
-		local_chunk.hash[j] = chunk.hash[j];
-	}
-	for (j = 0; j < PAYLOAD_SIZE_BYTES; ++j) {
-		local_chunk.part[j] = chunk.part[j];
-	}
+//	//local chunk for verifying
+//	Chunk local_chunk;
+//	int j = 0;
+//	//copying data
+//	for (j = 0; j < 16; ++j) {
+//		local_chunk.hash[j] = chunk.hash[j];
+//	}
+//	for (j = 0; j < PAYLOAD_SIZE_BYTES; ++j) {
+//		local_chunk.part[j] = chunk.part[j];
+//	}
 
 //start parallel transfer
 	init_new_transfer();
 // MD5 verification
 	MD5_CTX ctx;
 	MD5_Init(&ctx);
-	MD5_Update(&ctx, local_chunk.part, header.chunk_size);
+	if (current % 2 == 0) {
+		MD5_Update(&ctx, chunk1.part, header.chunk_size);
+	} else {
+		MD5_Update(&ctx, chunk2.part, header.chunk_size);
+	}
 	unsigned char result[16];
 	MD5_Final(result, &ctx);
 //comparing result with hash
 	int i = 0;
+	uint8_t hash[16];
+	for (i = 0; i < 16; ++i) {
+		if (current % 2 == 0) {
+			hash[i] = chunk1.hash[i];
+		} else {
+			hash[i] = chunk2.hash[i];
+		}
+
+	}
+
 	for (i = 0; i < 6; ++i) {
-		if (*(result + i) != local_chunk.hash[i]) {
+		if (*(result + i) != hash[i]) {
 			//signal error
 			led_yellow_on();
 			return 0;
@@ -190,8 +217,9 @@ int verify(void) {
  * initialization of end of archive
  */
 void get_end() {
-	uint32_t src = (uint32_t) ((sector_start_address[FLASH_USER_PAYLOAD_START_SECTOR])
-			+ (current * (16 + header.chunk_size)));
+	uint32_t src =
+			(uint32_t) ((sector_start_address[FLASH_USER_PAYLOAD_START_SECTOR])
+					+ ((current + 1) * (16 + header.chunk_size)));
 	unsigned int control = 1 | (1 << 26) | (1 << 27) | (1 << 31);
 	LPC_GPDMACH0->DMACCSrcAddr = src;
 	LPC_GPDMACH0->DMACCDestAddr = (uint32_t) &end;
